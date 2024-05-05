@@ -5,12 +5,12 @@ on:
     branches:
       - main
     paths:
-      - terraform/jumphost/**
+      - Terraform/jumphost/**
   pull_request:
     branches:
       - main
     paths:
-      - terraform/jumphost/**
+      - Terraform/jumphost/**
 
 env:
   # Credentials for deployment to AWS
