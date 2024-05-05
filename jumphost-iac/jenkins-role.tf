@@ -28,4 +28,3 @@ resource "aws_iam_instance_profile" "jumphost_execution_profile" {
   name = "${var.project_name}-${var.environment}-jumphost-execution-profile"
   role = aws_iam_role.jumphost_execution_role.name
 }
-

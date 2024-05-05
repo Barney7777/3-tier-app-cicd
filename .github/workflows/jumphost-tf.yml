@@ -5,12 +5,12 @@ on:
     branches:
       - main
     paths:
-      - Terraform/jumphost/**
+      - jumphost-iac/**
   pull_request:
     branches:
       - main
     paths:
-      - Terraform/jumphost/**
+      - jumphost-iac/**
 
 env:
   # Credentials for deployment to AWS
@@ -25,7 +25,7 @@ jobs:
     defaults:
       run:
         shell: bash
-        working-directory: ./terraform/jumphost
+        working-directory: ./jumphost-iac
     
     steps:
     - name: Checkout source code

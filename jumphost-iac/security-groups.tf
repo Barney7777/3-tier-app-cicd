@@ -21,20 +21,12 @@ resource "aws_security_group" "bastion_security_group" {
   }
 
   ingress {
-    description = "https access"
+    description = "https Access"
     from_port   = 443
     to_port     = 443
     protocol    = "tcp"
     cidr_blocks = ["0.0.0.0/0"]
   }
-
-  # ingress {
-  #   description = "SonarQube Access"
-  #   from_port   = 9000
-  #   to_port     = 9000
-  #   protocol    = "tcp"
-  #   cidr_blocks = ["0.0.0.0/0"]
-  # }
 
   ingress {
     description = "Prometheus access"

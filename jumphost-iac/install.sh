@@ -9,7 +9,6 @@ exec >> /var/log/init-script.log 2>&1
 
 echo "Starting initialization script..."
 
-
 # Install Kubectl
 sudo apt update
 sudo apt install curl -y
