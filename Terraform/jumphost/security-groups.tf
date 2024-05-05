@@ -21,12 +21,20 @@ resource "aws_security_group" "bastion_security_group" {
   }
 
   ingress {
-    description = "SonarQube Access"
-    from_port   = 9000
-    to_port     = 9000
+    description = "https access"
+    from_port   = 443
+    to_port     = 443
     protocol    = "tcp"
     cidr_blocks = ["0.0.0.0/0"]
   }
+
+  # ingress {
+  #   description = "SonarQube Access"
+  #   from_port   = 9000
+  #   to_port     = 9000
+  #   protocol    = "tcp"
+  #   cidr_blocks = ["0.0.0.0/0"]
+  # }
 
   ingress {
     description = "Prometheus access"
@@ -38,8 +46,8 @@ resource "aws_security_group" "bastion_security_group" {
 
   ingress {
     description = "app access"
-    from_port   = 80
-    to_port     = 80
+    from_port   = 3000
+    to_port     = 3000
     protocol    = "tcp"
     cidr_blocks = ["0.0.0.0/0"]
   }
@@ -52,7 +60,7 @@ resource "aws_security_group" "bastion_security_group" {
   }
 
   tags = {
-    Name = "${var.project_name}-${var.environment}-bastion-sg"
+    Name = "${var.project_name}-${var.environment}-jumphost-sg"
   }
 }
 

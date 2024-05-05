@@ -4,8 +4,8 @@ project_name = "yelp"
 environment  = "dev"
 
 # VPC variables
-vpc_cidr               = "10.0.0.0/16"
-public_subnet_az1_cidr = "10.0.0.0/24"
+vpc_cidr               = "192.168.0.0/16"
+public_subnet_az1_cidr = "192.168.0.0/24"
 
 # Security group variables
 ssh_location = "124.168.245.10/32"
