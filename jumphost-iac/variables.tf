@@ -47,4 +47,3 @@ variable "instance_name" {
   description = "EC2 Instance name for the jenkins/bastionhost server"
   type        = string
 }
-
